@@ -1,0 +1,30 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Plugin" type="GradleRunConfiguration" factoryName="Gradle">
+    <log_file alias="idea.log" path="$PROJECT_DIR$/build/idea-sandbox/system/log/idea.log" />
+    <ExternalSystemSettings>
+      <option name="env">
+        <map>
+          <entry key="Grazie-Auth-Application-JWT" value="eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJHcmF6aWUgQXV0aGVudGljYXRpb24iLCJ1aWQiOiI1ZGIxZTFhNS03YjdjLTRiOTgtOWE1MC0wMGEyOTM0MTNiNjUiLCJ0eXBlIjoiY3VzdG9tIiwibGljZW5zZSI6ImN1c3RvbV9hcHA6OGM5OGEzYjgtNzI4Ny00NjczLWExYWMtNWE5MDJkNmJmNGQxIiwibGljZW5zZV90eXBlIjoiamV0YnJhaW5zLWFpLmFwcGxpY2F0aW9uLnN0YW5kYXJkIiwiZXhwIjoxNzEyOTI3ODk0fQ.fwwkAXDLPKQPewx5eQAevOEYrJ_JEAy-YnNdG1Jm9OfzUf-ebixexk1pxoxCo8njIheMDmJqoUXHijpVr0iY_QSHwsekKQQNLHWaZH5P6x6-JnTHxT8CkV6J2R4xwm8ebIQwHYPOXBgIVP-VkbCT7AT-t_FaAFCwtOCsWDpDUxGqUGj5yPOS9Otikard-xDlqr5jS7hLy3AbOCejiIOPUteBo8ozIY8bQChQeWOqYlGEvtFX2XJDHbD9tRQ8OuBM8niqwOErKt6AO-WTS63ApagahXFymbNoNV35TPJ2Q62kX-E42jz7juan_V_JoxhEJMrveue6UfFSjzvt1Mmk4g" />
+        </map>
+      </option>
+      <option name="executionName" />
+      <option name="externalProjectPath" value="$PROJECT_DIR$" />
+      <option name="externalSystemIdString" value="GRADLE" />
+      <option name="scriptParameters" value="" />
+      <option name="taskDescriptions">
+        <list />
+      </option>
+      <option name="taskNames">
+        <list>
+          <option value="runIde" />
+        </list>
+      </option>
+      <option name="vmOptions" value="" />
+    </ExternalSystemSettings>
+    <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+    <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+    <DebugAllEnabled>false</DebugAllEnabled>
+    <RunAsTest>false</RunAsTest>
+    <method v="2" />
+  </configuration>
+</component>
