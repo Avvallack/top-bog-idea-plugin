@@ -5,14 +5,14 @@ import ai.grazie.client.common.SuspendableHTTPClient
 import ai.grazie.client.ktor.GrazieKtorHTTPClient
 import ai.grazie.model.auth.v5.AuthData
 import ai.grazie.model.cloud.AuthType
-import ai.grazie.model.llm.profile.OpenAIProfileIDs
+import ai.grazie.model.llm.profile.GoogleProfileIDs
 import ai.grazie.model.llm.prompt.LLMPromptID
 
 class ChatSender {
     suspend fun callToChat(githubProfileContent: String,
                            projectContent: String): String {
         val appToken = System.getenv("Grazie-Auth-Application-JWT")
-        val chatProfile = OpenAIProfileIDs.Chat.GPT4Turbo
+        val chatProfile = GoogleProfileIDs.Chat.GeminiPro1_5
         val systemPrompt = """You are an intelligent assistant integrated within JetBrains IDEs, 
             |equipped with deep knowledge in social profiling and software development insights. 
             |Your expertise allows you to analyze a developer's GitHub profile comprehensively, 
@@ -72,8 +72,8 @@ class ChatSender {
         val profileResponseStream = client.llm().v6().chat {
             prompt = LLMPromptID("userProfile")
             profile = chatProfile
-            messages {system(systemPrompt)
-                user(userProfilePrompt)
+            messages {
+                user("$systemPrompt/n$userProfilePrompt")
             }
         }
 
@@ -86,8 +86,8 @@ class ChatSender {
         val tipsResponseStream = client.llm().v6().chat {
             prompt = LLMPromptID("userProfile")
             profile = chatProfile
-            messages {system(systemPrompt)
-                user(userProfilePrompt + projectPrompt)
+            messages {
+                user("$systemPrompt/n$userProfilePrompt$projectPrompt")
             }
         }
         val projectTipsBuilder = StringBuilder()
